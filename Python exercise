@@ -1,0 +1,320 @@
+def calculate_gpa(courses):
+    total_weighted_grades = 0
+    total_hours = 0
+    
+    # Iterate over the list of courses
+    for course in courses:
+        grade = course['grade']
+        hours = course['hours']
+        total_weighted_grades += grade * hours
+        total_hours += hours
+    
+    # Calculate GPA
+    gpa = total_weighted_grades / total_hours
+    return gpa
+
+# Example data for courses
+courses = [
+    {"name": "Mathematics", "grade": 3.5, "hours": 4},
+    {"name": "History", "grade": 3.0, "hours": 3},
+    {"name": "Science", "grade": 4.0, "hours": 4},
+    {"name": "Art", "grade": 2.5, "hours": 2},
+    {"name": "English", "grade": 3.7, "hours": 3}
+]
+
+# Calculate and print the GPA
+gpa = calculate_gpa(courses)
+print(f"The GPA is: {gpa:.2f}")
+
+stars = '*' * 128
+print(stars)
+
+seconds = 48600  # Example value
+
+# Calculate the current hour
+hour = seconds // 3600  # 1 hour = 3600 seconds
+
+# Calculate the remaining seconds after calculating the hour
+remaining_seconds = seconds % 3600
+
+# Calculate the current minute
+minute = remaining_seconds // 60
+
+# Output the result
+print(f"Current time: {hour:02}:{minute:02}")
+
+# Data for each person
+john_weight = 67
+john_height = 1.82
+
+bob_weight = 80
+bob_height = 1.79
+
+alice_weight = 50
+alice_height = 1.55
+
+# Calculating BMI for each person
+john = john_weight / (john_height ** 2)
+bob = bob_weight / (bob_height ** 2)
+alice = alice_weight / (alice_height ** 2)
+
+# Output the results
+print(f"John's BMI: {john:.2f}")
+print(f"Bob's BMI: {bob:.2f}")
+print(f"Alice's BMI: {alice:.2f}")
+
+# Example value of x (change this to test with different values)
+x = 42.21345
+
+# Print the value of x to verify it
+print(f"Value of x: {x}")
+
+# Extract the decimal part
+decimal = x - int(x)
+
+# Print the extracted decimal part
+print(f"Decimal part of x: {decimal}")
+
+# Given variables
+number_of_apples = 12345
+numbers_of_persons = 3517
+
+# Calculate apples given to each person
+apples_given_to_each = number_of_apples // numbers_of_persons
+
+# Calculate the number of apples left
+apples_left = number_of_apples % numbers_of_persons
+
+# Output the results
+print(f"Each person gets {apples_given_to_each} apples.")
+print(f"Apples left: {apples_left}")
+
+
+# Value where decimal part should be 0.0625
+x = 50.0625
+
+# Calculate the decimal part
+decimal = x - int(x)
+
+# Output the result
+print(decimal)  # Should output 0.0625
+
+# Grades and hours
+grades = [5, 2, 5, 3, 2]
+hours = [4, 2, 3, 2, 3]
+
+# Step 1: Calculate the total grade-weighted hours
+total_weighted_hours = sum(grade * hour for grade, hour in zip(grades, hours))
+
+# Step 2: Calculate the total number of hours
+total_hours = sum(hours)
+
+# Step 3: Calculate the GPA
+gpa = total_weighted_hours / total_hours
+
+# Output the result
+print(gpa)  # Output will be approximately 3.64
+
+
+test_num_values = 10
+test_min_value = 5
+test_max_value = 9
+
+import random
+
+def gen_list(num_values, min_value, max_value):
+    """
+    Generate a list of random integers.
+
+    Parameters:
+    - num_values (int): The length of the list to generate.
+    - min_value (int): The minimum value for the integers in the list.
+    - max_value (int): The maximum value for the integers in the list.
+
+    Returns:
+    - list of int: A list containing random integers between min_value and max_value.
+    """
+    return [random.randint(min_value, max_value) for _ in range(num_values)]
+
+# Optional test
+test_num_values = 10
+test_min_value = 5
+test_max_value = 9
+print(gen_list(test_num_values, test_min_value, test_max_value))
+
+# Add the values
+result = 1234 + 9876
+
+# Print the result
+print(result)
+
+# Total bonus
+bonus = 1000
+
+# Costs of the dishes
+your_dish_cost = 25
+alice_dish_cost = 20
+bob_dish_cost = 30
+
+# Calculate total cost of dinner
+total_dinner_cost = your_dish_cost + alice_dish_cost + bob_dish_cost
+
+# Calculate money left after paying for dinner
+money_left = bonus - total_dinner_cost
+
+# Print the result
+print(money_left)
+
+rows = 3
+columns = 7
+total_cells = rows * columns
+print(f"The total number of cells is {total_cells}")
+
+
+# Define the crime rates for each city
+crime_rates = [749, 371, 828, 503, 1379]
+
+# Calculate the sum of the crime rates
+total_crime_rate = sum(crime_rates)
+
+# Calculate the number of cities
+number_of_cities = len(crime_rates)
+
+# Calculate the average crime rate
+average_crime_rate = total_crime_rate / number_of_cities
+
+# Print the result
+print(f"The average crime rate of the five cities is: {average_crime_rate:.2f}")
+
+# Define the time
+hours = 12
+minutes = 30
+
+# Convert hours and minutes to seconds
+seconds_from_hours = hours * 3600
+seconds_from_minutes = minutes * 60
+
+# Calculate the total number of seconds
+total_seconds = seconds_from_hours + seconds_from_minutes
+
+# Print the result
+print(f"Total number of seconds at {hours}:{minutes} is: {total_seconds}")
+
+# Define the number of people and cupcakes
+number_of_people = 32
+number_of_cupcakes = 142
+
+# Calculate how many cupcakes each guest will receive
+cupcakes_per_guest = number_of_cupcakes // number_of_people
+
+# Print the result
+print(f"Each guest will receive {cupcakes_per_guest} cupcakes.")
+
+# Define the number of guests and cupcakes
+number_of_guests = 32
+number_of_cupcakes = 142
+
+# Calculate the remainder of cupcakes after distribution
+remaining_cupcakes = number_of_cupcakes % number_of_guests
+
+# Print the result
+print(f"Remaining cupcakes after distribution: {remaining_cupcakes}")
+
+# Define the values
+value1 = 42
+value2 = "times"
+value3 = 17
+value4 = "="
+result = value1 * value3
+
+# Print the values in a single line
+print(value1, value2, value3, value4, result)
+
+def clean_name(name):
+    # Split the name into first name and last name
+    first_name, last_name = name.split()
+
+    # Capitalize the first letter of each name and make the rest lowercase
+    formatted_first_name = first_name.capitalize()
+    formatted_last_name = last_name.capitalize()
+
+    # Join the formatted names and return the result
+    return f"{formatted_first_name} {formatted_last_name}"
+
+# Test the function
+test_name = "AsIL sEnDo"
+expected_answer = "Asil Sendo"
+result = clean_name(test_name)
+
+# Print the result to compare
+print(f"Formatted name: {result}")
+print(f"Expected name: {expected_answer}")
+
+def format_songs(songs):
+    # Get the maximum number from the list of songs to determine how many digits we need
+    max_number = max(int(song.split(" - ")[0]) for song in songs)
+    
+    # Determine the number of digits (using the length of the largest number)
+    num_digits = len(str(max_number))
+    
+    # Create a list to hold formatted song names
+    formatted_songs = []
+    
+    # Loop over each song and format its number
+    for song in songs:
+        # Split the song into number and title
+        number, title = song.split(" - ", 1)
+        
+        # Format the number with leading zeros
+        formatted_number = f"{int(number):0{num_digits}d}"
+        
+        # Combine the formatted number with the title and add to the result list
+        formatted_songs.append(f"{formatted_number} - {title}")
+    
+    return formatted_songs
+
+# Test the function with the provided test case
+test_songs = [
+    "1 - Thoughts Of Time",
+    "2 - Passion Of The Night",
+    "3 - Amused By Her Strength",
+    "4 - Get My Friends",
+    "5 - Broken Life",
+    "6 - Super Song",
+    "7 - Darling, Remember The Times",
+    "8 - Baby, You are Strange And I Like It",
+    "9 - She Said I Will Try",
+    "10 - In Love With You",
+    "12 - Hat Of The South",
+    "13 - Friends Of My Dreams",
+    "14 - Dream His Luck"
+]
+
+# Expected formatted result
+formatted_songs = format_songs(test_songs)
+for song in formatted_songs:
+    print(song)
+
+import string
+
+def clean_message(message):
+    # Convert the message to lowercase
+    message = message.lower()
+    
+    # Remove punctuation from the message
+    cleaned_message = message.translate(str.maketrans('', '', string.punctuation))
+    
+    return cleaned_message
+
+# Test the function with the provided test case
+test_message = "WIN MONEY!!!! We Need YOUR Expert Opinion! EASY money. Click >HERE<"
+expected_answer = "win money we need your expert opinion easy money click here"
+result = clean_message(test_message)
+
+# Print the result to compare with expected answer
+print(f"Cleaned message: {result}")
+print(f"Expected message: {expected_answer}")
+
+
+
+
